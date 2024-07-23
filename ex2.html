@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/picocss/1.5.2/pico.min.css"
+        integrity="sha512-3gFq2IXMVlAQaUyahzhjDRivv0yqyXTb7xiy6ivTaG5Uz4hKI54uYxpQefdomgDVQ11eJVUbXG0YdPMDISiGgg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Puntuación Final</title>
+    <style>
+        .podium {
+            display: flex;
+        }
+
+        .stand {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            /* Cambio el fondo a un color gris claro para mejorar el contraste */
+        }
+
+        .place-number {
+            font-size: 24px;
+            color: #333;
+            /* Cambio el color a un tono más oscuro para mejorar la legibilidad */
+            font-weight: bold;
+        }
+
+        .player-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+            /* Cambio el color a un tono más oscuro para mejorar la legibilidad */
+        }
+
+        .score {
+            font-size: 20px;
+            color: #000;
+            /* Cambio el color a negro para mejorar la legibilidad */
+        }
+
+        .first-place {
+            background-color: #ffd700;
+        }
+
+        .second-place {
+            background-color: #c0c0c0;
+        }
+
+        .third-place {
+            background-color: #cd7f32;
+        }
+
+        .stand {
+            border: 2px solid #000;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin: 0 10px;
+        }
+
+        button {
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="podium">
+            <div class="stand first-place">
+                <div class="place-number">1st</div>
+                <div class="player-name" id="player-1-name">Player 1</div>
+                <div class="score" id="player-1-score">X palabras adivinadas</div>
+            </div>
+            <div class="stand second-place">
+                <div class="place-number">2nd</div>
+                <div class="player-name" id="player-2-name">Player 2</div>
+                <div class="score" id="player-2-score">X palabras adivinadas</div>
+            </div>
+            <div class="stand third-place">
+                <div class="place-number">3rd</div>
+                <div class="player-name" id="player-3-name">Player 3</div>
+                <div class="score" id="player-3-score">X palabras adivinadas</div>
+            </div>
+        </div>
+        <div>
+            <button id="update-button">
+                Actualizar Podium
+            </button>
+            <div class="container" id="error-message" style="color: red"></div>
+        </div>
+    </main>
+
+    <script>
+        // URL de la API
+        const apiUrl = "https://score-word-of-the-dat.onrender.com/scores";
+
+        // Función para obtener y actualizar los datos
+        async function updatePodium() {
+            // Realizar una solicitud GET a la API
+            const response = await fetch(apiUrl);
+
+            // Analizar el JSON de la respuesta
+            const data = await response.json();
+
+            // Actualizar el DOM con los datos obtenidos
+            document.querySelector("#player-1-name").textContent = data[0].name;
+            document.querySelector("#player-1-score").textContent = data[0].score + " palabras adivinadas";
+
+            document.querySelector("#player-2-name").textContent = data[1].name;
+            document.querySelector("#player-2-score").textContent = data[1].score + " palabras adivinadas";
+
+            document.querySelector("#player-3-name").textContent = data[2].name;
+            document.querySelector("#player-3-score").textContent = data[2].score + " palabras adivinadas";
+
+            // Limpiar cualquier mensaje de error previo
+            document.querySelector("#error-message").textContent = "";
+
+        }
+
+        // Agregar un evento al botón para actualizar el podio
+        document.querySelector("#update-button").addEventListener("click", updatePodium);
+
+        // Llamar a la función una vez al cargar la página
+        updatePodium();
+    </script>
+</body>
+
+</html>
