@@ -1,4 +1,15 @@
 function rps(p1, p2) {
+    const possibleOptions = ['rock', 'scissors', 'paper'];
+
+    if (!possibleOptions.includes(p1)) {
+        throw new Error('Error! The first player did not provide a valid choice.');
+    }
+
+    if (!possibleOptions.includes(p2)) {
+        throw new Error('Error! The second player did not provide a valid choice.');
+    }
+
+
     if (p1 === p2) {
         return "Draw!";
     } else if (p1 === "rock" && p2 === "scissors") {
@@ -20,6 +31,6 @@ console.log(rps('paper', 'rock')); // "Player 1 won!"
 
 /** Descomenta uno a uno y lanza la excepción correspodiente */
 
-//console.log(rps('', 'scissors')); // "Error! The first player did not provide a valid choice."
+console.log(rps('', 'scissors')); // "Error! The first player did not provide a valid choice."
 
 //console.log(rps('scissors', 'cuchara')); // "Error! The second player did not provide a valid choice."
