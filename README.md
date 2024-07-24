@@ -37,6 +37,9 @@ Gestiona adecuadamente los fallos para informar al usuario que en estos momentos
 
 Valida los parámetros de entrada de la función tal y como se expresa en los comentarios del ejercicio
 
+Resultado esperado: si se invoca la función con parámetros incorrectos el programa debe fallar lanzando una excepción:
+<img src="https://oscarm.tinytake.com/media/1678071?filename=1721823036311_TinyTake24-07-2024-02-10-25_638574198352895800.png&sub_type=thumbnail_preview&type=attachment&width=1199&height=616" title="Powered by TinyTake Screen Capture"/><br>
+
 ## ex3b
 
 Valida los parámetros de entrada de la función tal y como se expresa en los comentarios del ejercicio
