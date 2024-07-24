@@ -8,7 +8,7 @@ function readAndDisplayJSON(filename) {
     const data = fs.readFileSync(filename, 'utf8');
 
     // Intentar parsear el JSON
-    const people = JSON.parse(data);
+    const people = JSON.parse(data); // 
 
     // Mostrar los nombres y correos electrónicos
     people.forEach(person => {
@@ -18,7 +18,12 @@ function readAndDisplayJSON(filename) {
 }
 
 // Ejecutar la función con el nombre del archivo
-readAndDisplayJSON('people1.json');
+try {
 
-// Este fichero falla. Usar try...catch para gestionar el error
-// readAndDisplayJSON('people1_bad.json');
+    readAndDisplayJSON('people1.json');
+    // Este fichero falla. Usar try...catch para gestionar el error
+    readAndDisplayJSON('people1_bad.json');
+} catch (err) {
+    console.log("Ha ocurrido un error");
+    console.log(err.message);
+}
