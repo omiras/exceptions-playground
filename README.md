@@ -42,7 +42,12 @@ Resultado esperado: si se invoca la función con parámetros incorrectos el prog
 
 ## ex3b
 
-Valida los parámetros de entrada de la función tal y como se expresa en los comentarios del ejercicio
+Valida los parámetros de entrada de la función tal y como se expresa en los comentarios del ejercicio.
+
+- Debemos comprobar si el parámetro _marks_ es realmente un array
+- Debemos comprobar si todos los elementos del array _marks_ son de tipo _number_
+
+<img src="https://oscarm.tinytake.com/media/16780b1?filename=1721823480659_TinyTake24-07-2024-02-17-32_638574202794180960.png&sub_type=thumbnail_preview&type=attachment&width=1199&height=600" title="Powered by TinyTake Screen Capture"/><br>
 
 ## ex4
 
