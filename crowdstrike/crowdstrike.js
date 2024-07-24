@@ -42,7 +42,7 @@ const crowdStrike = {
         let antivirusDateBase = DDBB;
 
         // mis cositas
-        valorGlobalNecseario = "v1.0";
+        valorGlobalNecesario = "v1.0";
 
         // Hago "cosas"
         let newDefinition = DDBB[3].description.toLocaleUpperCase();
