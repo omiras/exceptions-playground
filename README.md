@@ -6,7 +6,9 @@ Ejecuta `node ex1.js`
 
 El script lee de forma adecuada un fichero JSON y muestra el nombre y email del fichero _people1.json_. Sin embargo, si intentamos cargar _people1_bad.json_ va a fallar estrepitosmanete porque está mal formado el JSON (NO tienes que arreglarlo!)
 
-Utiliza el bloque de control try...catch para capturar el error y mostrar un mensaje informativo al usuario por pantalla si al usar el método JSON.parse este lanza una excepción porque es incapaz de convertir el texto del fichero a JSON.
+Utiliza el bloque de control try...catch para gestionar los errores que pueda lanzar la función readAndDisplayJSON. Resultado esperado:
+
+<img src="https://oscarm.tinytake.com/media/1677d21?filename=1721817584627_TinyTake24-07-2024-12-39-43_638574143856371369.png&sub_type=thumbnail_preview&type=attachment&width=1198&height=205" title="Powered by TinyTake Screen Capture"/><br>
 
 ## ex1b.html -> Abrir con Live Server !
 

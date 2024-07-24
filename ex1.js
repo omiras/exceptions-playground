@@ -21,4 +21,9 @@ function readAndDisplayJSON(filename) {
 readAndDisplayJSON('people1.json');
 
 // Este fichero falla. Usar try...catch para gestionar el error
-// readAndDisplayJSON('people1_bad.json');
+try {
+    readAndDisplayJSON('people1_bad.json');
+} catch (e) {
+    console.log("Ha ocurrido un error al leer el fichero people1_bad.json");
+    console.log(e.message);
+}
