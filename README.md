@@ -12,13 +12,14 @@ Utiliza el bloque de control try...catch para gestionar los errores que pueda la
 
 ## ex1b.html -> Abrir con Live Server !
 
-Somos programadores en la compañia RyanAir y utilizamos el software de seguridad [CrowdStrike](https://www.elespanol.com/omicrono/software/20240724/crowdstrike-explica-origen-apagon-informatico-mundial-afecto-millones-equipos-windows/872912725_0.html)
+Somos programadores en la compañia RyanAir y usamos una app Web para gestionar la facturación de maletas.
 
-La aplicación calcula los gastos de facturación de las maletas en función de los quilos que pese.
+Además nuestra app utiliza el software de seguridad [CrowdStrike](https://www.elespanol.com/omicrono/software/20240724/crowdstrike-explica-origen-apagon-informatico-mundial-afecto-millones-equipos-windows/872912725_0.html)
+
 
 El problema es que la última actualización de Crowdstrike hace fallar la app estrepitosamente. El otro problema es que tampoco podemos dejar de usar por completo el software dado que funciona parcialmente y si lo desactivamos nos pueden hackear los sistemas con facilidad
 
-Solamente tenemos acceso al fichero ex1b.html. Modifica adecuadamente el código para gestionar el error de actualización del software y que se pueda seguir utilizando la aplicación para ~~timar~~ facturar el equipaje
+Solamente tenemos acceso al fichero **ex1b.html**. Modifica adecuadamente el código para gestionar el error de actualización del software y que se pueda seguir utilizando la aplicación para ~~timar~~ facturar el equipaje
 
 
 ## ex2.html -> Abrir con Live Server !
