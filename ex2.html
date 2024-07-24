@@ -55,12 +55,22 @@
     </main>
     <script>
         async function getQuestion() {
+            let data;
 
+            try {
+                const response = await fetch('https://api-programming-questions.onrender.com/api/v2beta/question/random');
+                console.log("🚀 ~ file: ex2.html:61 ~ getQuestion ~ response:", response)
+                if (!response.ok) {
+                    throw new Error("Error al consumir la API");
+                }
 
-            const response = await fetch('https://api-programming-questions.onrender.com/api/v2beta/question/random');
-
-            // 2. Procesar el JSON que vaís a recibir y rellenar el DOM
-            const data = await response.json();
+                // 2. Procesar el JSON que vaís a recibir y rellenar el DOM
+                data = await response.json();
+            } catch (e) {
+                console.error(e.message);
+                document.getElementById('error-message').textContent = "En estos momentos no podemos obtener una pregunta de la API. Vuelve a probarlo más tarde.";
+                return;
+            }
             console.log("🚀 ~ file: index.html:32 ~ getQuestion ~ data:", data)
 
             document.getElementById('question').textContent = data.question.text
