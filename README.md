@@ -33,6 +33,8 @@ El problema es que hay _tanta demanda_ de esta API que en ocasiones no puede pro
 
 Gestiona adecuadamente los fallos para informar al usuario que en estos momentos no se puede utilizar la API debido a la alta demanda.
 
+[Video funcionalidad deseada](https://oscarm.tinytake.com/df/1677dfb/thumbnail?type=attachments&version_no=0&file_version_no=0&thumbnail_size=preview)
+
 ## ex3
 
 Valida los parámetros de entrada de la función tal y como se expresa en los comentarios del ejercicio
