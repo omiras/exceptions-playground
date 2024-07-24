@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 
-
+/** NO PODEMOS MODIFICAR LA FUNCIÓN, NO ES NUESTRA */
 function readAndDisplayJSON(filename) {
     // Leer el archivo de manera sincrónica
     const data = fs.readFileSync(filename, 'utf8');
@@ -19,3 +19,6 @@ function readAndDisplayJSON(filename) {
 
 // Ejecutar la función con el nombre del archivo
 readAndDisplayJSON('people1.json');
+
+// Este fichero falla. Usar try...catch para gestionar el error
+// readAndDisplayJSON('people1_bad.json');
