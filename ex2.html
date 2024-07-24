@@ -99,7 +99,7 @@
 
     <script>
         // URL de la API
-        const apiUrl = "https://score-word-of-the-dat.onrender.com/scores";
+        const apiUrl = "https://score-word-of-the-dat.onrender.com/vbeta/api/score";
 
         // Función para obtener y actualizar los datos
         async function updatePodium() {
@@ -108,6 +108,7 @@
 
             // Analizar el JSON de la respuesta
             const data = await response.json();
+            console.log("🚀 ~ file: ex2.html:111 ~ updatePodium ~ data:", data)
 
             // Actualizar el DOM con los datos obtenidos
             document.querySelector("#player-1-name").textContent = data[0].name;
