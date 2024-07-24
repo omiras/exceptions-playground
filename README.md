@@ -21,6 +21,9 @@ El problema es que la última actualización de Crowdstrike hace fallar la app e
 
 Solamente tenemos acceso al fichero **ex1b.html**. Modifica adecuadamente el código para gestionar el error de actualización del software y que se pueda seguir utilizando la aplicación para ~~timar~~ facturar el equipaje
 
+Resultado esperado: 
+<img src="https://oscarm.tinytake.com/media/1677d6d?filename=1721818029718_TinyTake24-07-2024-12-46-52_638574148287441332.png&sub_type=thumbnail_preview&type=attachment&width=1200&height=581" title="Powered by TinyTake Screen Capture"/><br>
+
 
 ## ex2.html -> Abrir con Live Server !
 
