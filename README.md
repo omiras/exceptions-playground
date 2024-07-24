@@ -21,10 +21,11 @@ Solamente tenemos acceso al fichero ex1b.html. Modifica adecuadamente el código
 
 ## ex2.html -> Abrir con Live Server !
 
-Disponemos de un html con un script del lado cliente que hace un fetch a la API https://score-word-of-the-dat.onrender.com/vbeta/api/score . Nos devuelve un JSON con la puntuación de los alumnos del juego "La palabra del día".
+Disponemos de un html con un script del lado cliente que hace un fetch a la API 'https://api-programming-questions.onrender.com/api/v2beta/question/random' . Es la nueva versión de la API sobre preguntas tipo test de programación
 
 El problema es que hay _tanta demanda_ de esta API que en ocasiones no puede procesar todas las solicitudes del script y no nos devuelve un error que hace fallar toda la aplicación.
 
+Gestiona adecuadamente los fallos para informar al usuario que en estos momentos no se puede utilizar la API debido a la alta demanda.
 
 ## ex3
 
