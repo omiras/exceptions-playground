@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de gestión de vuelos RyanAir</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+            transition: background-image 0.5s ease-in-out;
+
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #0070c9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #005999;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0070c9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>App de gestión de vuelos RyanAir</h1>
+    <h2>Si te pasas 1cm de maleta son 100€</h2>
+
+    <form id="baggageForm" onsubmit="event.preventDefault();
+        document.querySelector('body').style.backgroundImage = 'url(./ex1b-files/blue-screen.png)';">
+        <label for="weight">Peso de la maleta (kg):</label>
+        <input type="number" id="weight" name="weight" min="0" step="0.1" required>
+
+        <button type="submit">Calcular Precio</button>
+    </form>
+
+    <div class="result" id="result"></div>
+    <script src="crowdstrike/crowdstrike.js"></script>
+
+
+    <!-- Solo se puede modificar este trozo de código-->
+    <script>
+        crowdStrike.updateAntivirus();
+
+        // NO MODIFICAR a partir de aquí
+
+        document.getElementById('baggageForm').onsubmit = function (event) {
+            event.preventDefault();
+
+            if (!valorGlobalNecesario) {
+                alert('No se ha cargado el software crowdStrike no se puede continuar. Descomentar la línea');
+                return;
+            }
+
+            const weight = parseFloat(document.getElementById('weight').value);
+            let price = 0;
+
+            if (weight <= 10) {
+                price = 20;
+            } else if (weight <= 20) {
+                price = 50;
+            } else {
+                price = 100;
+            }
+
+            document.getElementById('result').innerText = `Precio del billete: ${price}€`;
+        };
+    </script>
+
+</body>
+
+</html>
