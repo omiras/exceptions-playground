@@ -60,4 +60,4 @@ Modifica **unicamente** el cuerpo del a función:
 
 - Tenemos que validar que _plate_ no sea un string vacío (ya está implementado)
 - Tenemos que validar que _plate_ sea realmente un string. Si no lo es, debemos lanzar una excepción con un mensaje adecuado
-- Tenemos que validar que _plate_ sea realmente una matrícula de coche (4 letras cualesquiera seguidas de 3 números). Si no es una matrícula válida debemos lanzar una excepción con un mensaje adecuado.
+- Tenemos que validar que _plate_ sea realmente una matrícula de coche (3 letras cualesquiera seguidas de 4 números). Si no es una matrícula válida debemos lanzar una excepción con un mensaje adecuado.
